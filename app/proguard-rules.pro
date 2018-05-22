@@ -23,3 +23,17 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+-keepattributes Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,*Annotation*,EnclosingMethod
+#指定代码的压缩级别
+-optimizationpasses 5
+ #混淆时不会产生形形色色的类名  是否使用大小写混合
+-dontusemixedcaseclassnames
+ #指定不去忽略非公共的类库 是否混淆第三方jar
+-dontskipnonpubliclibraryclasses
+#不预校验  混淆时是否做预校验
+-dontpreverify
+#混淆时是否记录日志
+-verbose
+-ignorewarnings
+#优化 混淆时所采用的算法
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
